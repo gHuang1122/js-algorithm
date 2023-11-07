@@ -1,0 +1,20 @@
+{
+  "name": "js-algorithm",
+  "version": "1.0.0",
+  "description": "基于js实现常规加密算法",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gHuang1122/js-algorithm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gHuang1122/js-algorithm/issues"
+  },
+  "homepage": "https://github.com/gHuang1122/js-algorithm#readme"
+}
