@@ -40,13 +40,16 @@ function stringToHex(inputString) {
 
 // stringToHex 对于 复杂字符有问题
 // const testStr = "é你好，世界！🌎";
-const testStr = "你好,世界";
-// const hex = stringToHex(testStr)
+const plainText = "你好,世界";
+// const hex = stringToHex(plainText)
 // const targetHex = Buffer.from(testStr, 'utf-8').toString('hex')
 // console.log("hex",hex)
 // console.log("targetHex",targetHex)
 // console.log(hex == targetHex)
 
-const bytes = enc.Utf8.parse(testStr)
-console.log(bytes)
-console.log(enc.Hex.stringify(bytes))
+const wordArray = enc.Utf8.parse(plainText)
+console.log(wordArray)
+const hex = enc.Hex.stringify(wordArray)
+console.log("hex",hex)
+const parseHex = enc.Hex.parse(hex).toString(enc.Utf8)
+console.log("parseHex",parseHex)
