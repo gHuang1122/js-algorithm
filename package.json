@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/gHuang1122/js-algorithm/issues"
   },
-  "homepage": "https://github.com/gHuang1122/js-algorithm#readme"
+  "homepage": "https://github.com/gHuang1122/js-algorithm#readme",
+  "dependencies": {
+    "crypto-js": "^4.2.0"
+  }
 }

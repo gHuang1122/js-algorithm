@@ -9,6 +9,7 @@
  *  实际使用还是使用Buffer转
  *  字符串转hex字符串，本质就是将字符的ASCII或unicode码点值转成16进制字符串
  * */
+const {enc} = require("crypto-js")
 
 function stringToHex(inputString) {
     let utf8Hex = '';
@@ -37,11 +38,15 @@ function stringToHex(inputString) {
     return utf8Hex;
 }
 
-// 复杂字符有问题
+// stringToHex 对于 复杂字符有问题
 // const testStr = "é你好，世界！🌎";
 const testStr = "你好,世界";
-const hex = stringToHex(testStr)
-const targetHex = Buffer.from(testStr, 'utf-8').toString('hex')
-console.log("hex",hex)
-console.log("targetHex",targetHex)
-console.log(hex == targetHex)
+// const hex = stringToHex(testStr)
+// const targetHex = Buffer.from(testStr, 'utf-8').toString('hex')
+// console.log("hex",hex)
+// console.log("targetHex",targetHex)
+// console.log(hex == targetHex)
+
+const bytes = enc.Utf8.parse(testStr)
+console.log(bytes)
+console.log(enc.Hex.stringify(bytes))
