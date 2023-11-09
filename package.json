@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/gHuang1122/js-algorithm#readme",
   "dependencies": {
-    "crypto-js": "^4.2.0"
+    "crypto-js": "^4.2.0",
+    "sm3": "^1.0.3"
   }
 }
